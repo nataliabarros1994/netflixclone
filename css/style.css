@@ -2,10 +2,12 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Helvetica"; 
 }
 
 body{
-	background: gray;
+	background: black;
+	overflow-x:hidden;
 }
 
 .center{
@@ -39,6 +41,7 @@ body{
  	margin-left: 30px;
  }
  .menu-header li{
+ 	font-size: 14px;
  	display: inline-block;
  	margin-right: 15px;
  }
@@ -69,7 +72,7 @@ body{
 .circle-notifications{
 	position: absolute;
 	right: 0;
-	top: -10;
+	top: -10px;
 	width: 20px;
 	height: 20px;
 	border-radius: 1px; 
@@ -87,9 +90,109 @@ body{
 	font size: 18px;
 	color: white;
 	font-weight: bold;
-	color: white;
+	
 }
 .header-right a{
 	color:white;
 	text-decoration: none;
+}
+
+/*Destaque*/
+section.destaque{
+	background-image:url('../images/banner.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 600px;
+	position: relative;
+	z-index: 1;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+section.destaque img{
+	min-width: 100%;
+	min-height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+}
+.overlay{
+	z-index: 2;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+
+.texto-destaque{
+	color: white;
+	z-index: 3;
+	position:relative;
+	margin-top:180px;
+	margin-left: 4%;
+}
+
+.texto-destaque h2{
+	color: #b10f17;
+	font-size: 60px;
+	text-transform: uppercase;
+}
+
+.texto-destaque p{
+	font-size: 17px;
+}
+
+.texto-destaque a{
+	background-color: rgba(100,100,100,0.3);
+	color: white;
+	text-decoration: none;
+	padding: 8px 40px;
+	font-size: 20px;
+	display: inline-block;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+
+.texto-destaque a:hover{
+	background: white;
+	color: black;
+}
+
+
+section.vitrine .vitrine-flex{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	position: relative;
+	z-index: 4;
+}
+
+.vitrine-single-banner{
+	width: 16.6%;
+	padding-top: 16.6%;
+	background-position: center;
+	background-size: cover;
+	
+}
+.vitrine-single-banner:hover{
+	transition: 1s;
+	transform:scale(1.2,1.2);
+}
+
+@media screen and (max-width: 768px){
+	section.vitrine .vitrine-flex{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-left: 0;
+}
+	.vitrine-single-banner{
+		width: 33.3%;
+		padding-top: 33.3%;
+		background-position:center;
+	}
 }
