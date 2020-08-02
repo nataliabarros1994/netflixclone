@@ -164,35 +164,37 @@ section.destaque img{
 
 
 section.vitrine .vitrine-flex{
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
+	/*width: 96%;
+	margin-left: 4%;*/
 	position: relative;
 	z-index: 4;
 }
 
 .vitrine-single-banner{
-	width: 16.6%;
-	padding-top: 16.6%;
-	background-position: center;
-	background-size: cover;
+	width: 100%;
+	padding-top: calc(16.6% / 2);
+	float: left;
+	position: relative;
 	
 }
-.vitrine-single-banner:hover{
+
+.vitrine-wraper{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+
+}
+.vitrine-wraper:hover{
 	transition: 1s;
 	transform:scale(1.2,1.2);
 }
 
 @media screen and (max-width: 768px){
-	section.vitrine .vitrine-flex{
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	margin-left: 0;
-}
-	.vitrine-single-banner{
-		width: 33.3%;
-		padding-top: 33.3%;
-		background-position:center;
-	}
+	.menu-header{display: none};
 }
